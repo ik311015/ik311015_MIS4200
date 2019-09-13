@@ -9,7 +9,13 @@ namespace ik311015_MIS4200.DAL
 {
     public class MIS4200Context : DbContext
     {
-        public MIS4200Context() : base("name=DefaultConnection");
+        public MIS4200Context() : base("name=DefaultConnection")
+        {
+
+        }
+        public DbSet<customer> Customer { get; set; }
+        public DbSet<order> Order { get; set; }
+        
     }
 
     
