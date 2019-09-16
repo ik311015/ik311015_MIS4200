@@ -15,7 +15,11 @@ namespace ik311015_MIS4200.DAL
         }
         public DbSet<customer> Customer { get; set; }
         public DbSet<order> Order { get; set; }
-        
+        public DbSet<customerOrder> customerOrder { get; set; }
+        public DbSet<lineItem> lineItem { get; set; }
+        public DbSet<product> product { get; set; }
+
+
     }
 
     
