@@ -12,6 +12,10 @@ namespace ik311015_MIS4200.Models
         public string firstName { get; set; }
         public string email { get; set; }
         public string phone { get; set; }
+        public string fullName { get
+            {
+                return firstName + " " + lastName;
+            } }
         public ICollection<order> orders { get; set; }
 
     }

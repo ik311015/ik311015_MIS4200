@@ -11,13 +11,18 @@ namespace ik311015_MIS4200.DAL
     {
         public MIS4200Context() : base("name=DefaultConnection")
         {
-
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context,
+            ik311015_MIS4200.Migrations.MISContext.Configuration>("DefaultConnection"));
         }
         public DbSet<customer> Customer { get; set; }
         public DbSet<order> Order { get; set; }
         public DbSet<customerOrder> customerOrder { get; set; }
         public DbSet<lineItem> lineItem { get; set; }
         public DbSet<product> product { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
 
 
     }
