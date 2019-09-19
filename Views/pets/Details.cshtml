@@ -1,0 +1,58 @@
+﻿@model ik311015_MIS4200.Models.pet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>pet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.animalType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.animalType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.petName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.petName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ownerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ownerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ownerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ownerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.age)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.petId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

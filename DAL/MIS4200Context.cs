@@ -24,7 +24,11 @@ namespace ik311015_MIS4200.DAL
             base.OnModelCreating(modelBuilder);
         }
 
+        public System.Data.Entity.DbSet<ik311015_MIS4200.Models.vet> vets { get; set; }
 
+        public System.Data.Entity.DbSet<ik311015_MIS4200.Models.pet> pets { get; set; }
+
+        public System.Data.Entity.DbSet<ik311015_MIS4200.Models.visit> visits { get; set; }
     }
 
     

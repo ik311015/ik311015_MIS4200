@@ -173,8 +173,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ordersController.cs" />
+    <Compile Include="Controllers\petsController.cs" />
     <Compile Include="Controllers\productsController.cs" />
+    <Compile Include="Controllers\vetsController.cs" />
+    <Compile Include="Controllers\visitsController.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
+    <Compile Include="DAL\petContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,7 +190,10 @@
     <Compile Include="Models\lineItem.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\order.cs" />
+    <Compile Include="Models\pet.cs" />
     <Compile Include="Models\product.cs" />
+    <Compile Include="Models\vet.cs" />
+    <Compile Include="Models\visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -267,6 +274,21 @@
     <Content Include="Views\products\Details.cshtml" />
     <Content Include="Views\products\Edit.cshtml" />
     <Content Include="Views\products\Index.cshtml" />
+    <Content Include="Views\vets\Create.cshtml" />
+    <Content Include="Views\vets\Delete.cshtml" />
+    <Content Include="Views\vets\Details.cshtml" />
+    <Content Include="Views\vets\Edit.cshtml" />
+    <Content Include="Views\vets\Index.cshtml" />
+    <Content Include="Views\visits\Create.cshtml" />
+    <Content Include="Views\visits\Delete.cshtml" />
+    <Content Include="Views\visits\Details.cshtml" />
+    <Content Include="Views\visits\Edit.cshtml" />
+    <Content Include="Views\visits\Index.cshtml" />
+    <Content Include="Views\pets\Create.cshtml" />
+    <Content Include="Views\pets\Delete.cshtml" />
+    <Content Include="Views\pets\Details.cshtml" />
+    <Content Include="Views\pets\Edit.cshtml" />
+    <Content Include="Views\pets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
