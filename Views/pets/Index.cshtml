@@ -5,11 +5,14 @@
 }
 
 <h2>All Pets</h2>
+<div class="alert alert-info">
+    <strong>Info!</strong> Below is a list of all the pets. Use the buttons to the left to delete and edit the information
+</div>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <span class="glyphicon glyphicon-plus-sign"></span> <a class="btn btn-success" @Html.ActionLink("Create", "Create", "pets")</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.animalType)
@@ -47,9 +50,9 @@
             @Html.DisplayFor(modelItem => item.age)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.petId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.petId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.petId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.petId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.petId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.petId })
         </td>
     </tr>
 }

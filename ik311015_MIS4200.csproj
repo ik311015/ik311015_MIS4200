@@ -186,6 +186,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\customer.cs" />
     <Compile Include="Models\customerOrder.cs" />
+    <Compile Include="Models\ErrorMessageAttribute.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\lineItem.cs" />
     <Compile Include="Models\ManageViewModels.cs" />

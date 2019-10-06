@@ -5,11 +5,14 @@
 }
 
 <h2>All Vets</h2>
+<div class="alert alert-info">
+    <strong>Info!</strong> Below is a list of all the vets. Use the buttons to the left to delete and edit the information
+</div>
+
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    <span class="glyphicon glyphicon-plus-sign"></span> <a class="btn btn-success" @Html.ActionLink("Create", "Create", "vets")</a>
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.firstName)
@@ -26,26 +29,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.firstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.lastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.phone)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.vetId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.vetId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.vetId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.vetId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.vetId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.vetId })
+            </td>
+        </tr>
+    }
 
 </table>

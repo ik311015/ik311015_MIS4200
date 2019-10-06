@@ -5,47 +5,54 @@
 }
 
 <h2>All Visits</h2>
+<div class="alert alert-info">
+    <strong>Info!</strong> Below is a list of all the visits. Use the buttons to the left to delete and edit the information
+</div>
+
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <span class="glyphicon glyphicon-plus-sign"></span> <a class="btn btn-success" @Html.ActionLink("Create", "Create", "visits")</a> @*@Html.ActionLink("Create New", "Create")*@
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.pet.animalType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.vet.firstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.visitDate)
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-hover">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.pet.animalType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.vet.firstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.visitDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.visitId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.visitId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.visitId })
-        </td>
-    </tr>
-}
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.pet.animalType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vet.firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.visitDate)
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pet.animalType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vet.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.visitDate)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.visitId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.visitId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.visitId })
+                </td>
+            </tr>
+        }
+
+    </table>
